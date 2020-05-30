@@ -11,7 +11,7 @@ You will have to copy the `gog_galaxy` directory into your own project, then
 copy the Galaxy headers to `gog_galaxy/include/galaxy` and the libraries to `lib` 
 and `res` according to the following schema:
 
-![Library paths](./libraries.png)
+![Library paths](./library_paths.png)
 
 Additionally, since Defold doesn't fully support linking against shared libraries,
 once you add this extension, your game will bundle correctly, but won't run from the
