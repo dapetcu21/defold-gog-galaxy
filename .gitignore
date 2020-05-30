@@ -1,0 +1,15 @@
+/.internal
+/build
+.externalToolBuilders
+dasda
+.DS_Store
+Thumbs.db
+.lock-wscript
+dasda
+*.pyc
+.project
+.cproject
+builtins
+/gog_galaxy/include/galaxy
+/gog_galaxy/lib
+/gog_galaxy/res

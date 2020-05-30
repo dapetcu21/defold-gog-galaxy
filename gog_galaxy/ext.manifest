@@ -1,0 +1,7 @@
+name: gog_galaxy
+
+platforms:
+    x86_64-linux:
+        context:
+            dynamicLibs: ["Galaxy64"]
+            flags: ["-std=c++11"]

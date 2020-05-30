@@ -1,0 +1,23 @@
+[bootstrap]
+main_collection = /example/main.collectionc
+
+[script]
+shared_state = 1
+
+[display]
+width = 960
+height = 640
+high_dpi = 1
+
+[project]
+title = GOG Galaxy SDK
+
+[library]
+include_dirs = gog_galaxy
+
+[input]
+game_binding = /example/all.input_bindingc
+
+[gog]
+client_id = YOUR_CLIENT_ID
+client_secret = YOUR_CLIENT_SECRET

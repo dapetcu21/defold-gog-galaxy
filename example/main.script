@@ -1,0 +1,32 @@
+local gog = require "gog_galaxy.gog"
+
+function init(self)
+	gog.init()
+	label.set_text("#available", gog.available
+		and "GOG extension is enabled"
+		or "GOG extension is disabled"
+	)
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	gog.final()
+end
+
+function update(self)
+	gog.update()
+end
+
+local ACHIEVEMENT_ID = "MY_ACHIEVEMENT"
+
+function on_input(self, action_id, action)
+	if action.pressed and action_id == hash("key_s") then
+		print("Setting achievement...")
+		gog.set_achievement(ACHIEVEMENT_ID)
+		gog.store()
+	elseif action.pressed and action_id == hash("key_c") then
+		print("Clearing achievement...")
+		gog.clear_achievement(ACHIEVEMENT_ID)
+		gog.store()
+	end
+end
