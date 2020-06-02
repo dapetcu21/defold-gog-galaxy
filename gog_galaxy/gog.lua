@@ -2,9 +2,6 @@
 local M = {}
 
 local inited = false
-local available = not not (gog_galaxy)
-
-M.available = available
 
 local init_queue = {}
 local user_stats_queue = {}
@@ -25,7 +22,7 @@ local function clear_queue(queue)
 end
 
 function M.init()
-  if available then
+  if gog_galaxy then
     local ok, err = pcall(function ()
       local client_id = tostring(sys.get_config("gog.client_id"))
       local client_secret = tostring(sys.get_config("gog.client_secret"))
@@ -79,7 +76,7 @@ end
 
 local function queued(queue, f)
   return function (...)
-    if not available then return end
+    if not gog_galaxy then return end
     if queue.resolved then
       return f(...)
     else

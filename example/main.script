@@ -2,7 +2,7 @@ local gog = require "gog_galaxy.gog"
 
 function init(self)
 	gog.init()
-	label.set_text("#available", gog.available
+	label.set_text("#available", gog_galaxy
 		and "GOG extension is enabled"
 		or "GOG extension is disabled"
 	)
